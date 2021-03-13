@@ -1,0 +1,116 @@
+/*https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/*/
+:root {
+  --blue: #10a2f5;
+  --lightest-gray: #fcfcfc;
+  --light-gray: #ccc3;
+  --medium-gray: #a8a8a8;
+  --input-focus-hue: 202;
+  --input-focus-saturation: 92%;
+  --input-focus-lightness: 50%;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  color: var(--medium-gray);
+  background-color: var(--lightest-gray);
+  /*background-color: var(--light-gray);*/
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+
+.header {
+  padding: 1rem;
+  font-size: 4rem;
+  color: var(--medium-gray);
+}
+
+.content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60rem;
+}
+
+.footer {
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.searchbar {
+  width: 95%;
+  font-size: 2rem;
+  font-style: italic;
+  font-family: inherit;
+  color: var(--medium-gray);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border: 4px solid var(--medium-gray);
+  border-radius: 4rem;
+  transition: 120ms box-shadow ease-in-out;
+}
+
+.searchbar:focus {
+  border-color: hsl(
+    var(--input-focus-hue),
+    var(--input-focus-saturation),
+    var(--input-focus-lightness)
+  );
+  box-shadow: 0 0 0 1rem
+    hsla(
+      var(--input-focus-hue),
+      var(--input-focus-saturation),
+      calc(var(--input-focus-lightness) + 40%),
+      0.8
+    );
+  outline: transparent;
+}
+
+.search-container > div {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+  font-size: 1.5rem;
+}
+
+.search-term {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.feed {
+  height: 500px;
+  width: 100%;
+}
+
+.feed-item {
+  background-color: var(--light-gray);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+a {
+  font-style: italic;
+  color: var(--medium-gray);
+}
+
+a:hover {
+  color: var(--blue);
+  text-decoration: none;
+  cursor: pointer;
+}
